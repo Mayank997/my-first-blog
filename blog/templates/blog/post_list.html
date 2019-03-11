@@ -7,16 +7,19 @@
             <h1><a href="/">Mayank's Blog</a></h1>
         </div>
 
-        <div>
-            <p>published: 11.03.2019, 21:42</p>
-            <h2><a href="">My first post</a></h2>
-            <p>Hello everyone,I am Mayank Singh,currently pursuing B.Tech in Information Technology stream having 87% aggrigate marks till 5th semester.I have completed my Highschool and Intermideate from Uttar Pradesh Board with 90% and 86% respectively.</p>
-        </div>
+       
+        {% for post in posts %}
+             <div>
+                  <p>published: {{post.published_date }}</p>
+                  <h2><a href="">{{ post.title }}</a></h2>
+                  <p>{{ post.text|linebreaksbr }}</p>
+             </div>
+        {% endfor %}
 
         <div>
             <p>published: 12.03.2019, 12:14</p>
             <h2><a href="">My second post</a></h2>
-            <p>Hello Everyone! So I was talking about myself,so my main interests are Programming and Quizzing.</p>
+            <p>Hello Everyone! So I was talking about myself,so my main interests are Programming and Quizzing.In programming,right now I am exploring Backend Devlopement by doing project on Django,which is a Python based framework. In quizzing,well to be honest I am away for it for a quite some time now but I actively participate in half-yearly quizzes organised by my college's quizzing club,in which I came out as a Winner three times in row and apart from that I have represented my school and my state Uttar Pradesh in various National Level Quiz Comptitions.</p>
         </div>
     </body>
 </html>
